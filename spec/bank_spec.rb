@@ -1,7 +1,7 @@
 require 'bank'
 
 describe Bank do
-  before(:all) do
+  before(:each) do
     @bank = Bank.new
   end
 
@@ -16,4 +16,14 @@ describe Bank do
       expect(@bank.get_balance).to eq 100
     end
   end
+
+  describe '#withdraw' do
+    it 'will deduct from account balance amount passed to withdraw' do
+      @bank.deposit(100)
+      expect(@bank.get_balance).to eq 100
+      @bank.withdraw(50)
+      expect(@bank.get_balance).to eq 50
+    end
+  end
+
 end

@@ -33,5 +33,9 @@ Output:
 ### Approach
 My approach will be to TDD a program that will allow the user to interact with it inside of a REPL such as IRB. The program will have clear, concise code that will be easily expandable.
 
+Write methods for deposit and withdrawal
+Write a printer method
+REFACTOR
+
 ### To Get Started
 Clone this repo
