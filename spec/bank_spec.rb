@@ -25,5 +25,4 @@ describe Bank do
       expect(@bank.get_balance).to eq 50
     end
   end
-
 end
