@@ -33,15 +33,26 @@ Output:
 ### Approach
 My approach will be to TDD a program that will allow the user to interact with it inside of a REPL such as IRB. The program will have clear, concise code that will be easily expandable.
 
-Write methods for deposit and withdrawal
-Write a printer class
-REFACTOR
+I've separated my classes so that they have clear responsibility and would be easily expanded on or changed to suit the clients specific needs.
 
 ### To Get Started
 Clone this repo
+```
+git clone git@github.com:bengscott2/tech_test_bank.git
+```
 
 run bundle to install dependencies
 
-``` bundle install ```
+```
+bundle install
+```
 
-start irb and rrequie file
+start irb and require bank file
+
+```
+irb -r ./lib/bank.rb
+```
+
+Here's a screenshot of a typical use
+
+![sample](./sample.54.58.png)
