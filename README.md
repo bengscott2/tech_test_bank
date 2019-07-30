@@ -55,4 +55,20 @@ irb -r ./lib/bank.rb
 
 Here's a screenshot of a typical use
 
-![sample](./sample.54.58.png)
+![sample](./screenshots/sample.54.58.png)
+
+### Testing
+Testing is done using RSpec, SimpleCov and Rubocop(linter)
+
+To run the tests
+```
+rspec
+```
+That will show you the passing tests as well as the code coverage which is %100.
+To see the linter has no offences
+```
+rubocop
+```
+Here's a screenshot of test coverage
+
+![sample](screenshots/code_coverage.36.29.png)
