@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 require 'entry'
 
 describe Entry do
   describe '#initialize' do
     before(:each) do
-      Timecop.freeze(1969, 07, 16)
+      Timecop.freeze(1969, 0o7, 16)
       @entry = Entry.new('debit', 1000, 1000)
       Timecop.return
     end

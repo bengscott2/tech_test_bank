@@ -1,12 +1,12 @@
+# frozen_string_literal: true
+
 class Bank
+  attr_reader :account_balance
+
   def initialize(entry = Entry)
     @account_balance = 0
     @entry = entry
     @entries = []
-  end
-
-  def get_balance
-    @account_balance
   end
 
   def deposit(amount)

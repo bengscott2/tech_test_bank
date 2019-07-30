@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Entry
   attr_reader :type, :amount, :balance_at_entry, :date
 
@@ -5,6 +7,6 @@ class Entry
     @type = type
     @amount = amount
     @balance_at_entry = balance_at_entry
-    @date = Time.new.strftime("%d/%m/%Y")
+    @date = Time.new.strftime('%d/%m/%Y')
   end
 end
