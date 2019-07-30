@@ -43,3 +43,5 @@ Clone this repo
 run bundle to install dependencies
 
 ``` bundle install ```
+
+start irb and rrequie file

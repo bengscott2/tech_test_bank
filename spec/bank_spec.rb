@@ -58,7 +58,7 @@ describe Bank do
       @entry_class_double = double('Entry Class')
       @printer_double = double('Printer', new: self, print_statement: printer_return)
       bank = Bank.new(@entry_class_double, @printer_double)
-      expect(bank.print_statement).to eq printer_return
+      expect { bank.print_statement }.to output(printer_return).to_stdout
     end
   end
 end
