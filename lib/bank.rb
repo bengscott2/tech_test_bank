@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+require_relative 'entry.rb'
+require_relative 'printer.rb'
 
 class Bank
   attr_reader :account_balance
@@ -12,14 +14,14 @@ class Bank
 
   def deposit(amount)
     @account_balance += amount
-    entry = new_entry('debit', amount, @account_balance)
+    entry = new_entry('credit', amount, @account_balance)
     @entries.push(entry)
     entry
   end
 
   def withdraw(amount)
     @account_balance -= amount
-    entry = new_entry('credit', amount, @account_balance)
+    entry = new_entry('debit', amount, @account_balance)
     @entries.push(entry)
     entry
   end
