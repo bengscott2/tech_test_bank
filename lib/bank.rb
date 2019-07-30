@@ -3,9 +3,10 @@
 class Bank
   attr_reader :account_balance
 
-  def initialize(entry = Entry)
+  def initialize(entry = Entry, printer = Printer.new)
     @account_balance = 0
     @entry = entry
+    @printer = printer
     @entries = []
   end
 
@@ -21,6 +22,10 @@ class Bank
     entry = new_entry('credit', amount, @account_balance)
     @entries.push(entry)
     entry
+  end
+
+  def print_statement
+    @printer.print_statement(@entries)
   end
 
   private

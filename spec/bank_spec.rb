@@ -51,4 +51,14 @@ describe Bank do
       expect(entry.balance_at_entry).to eq(-100)
     end
   end
+
+  describe '#print_statement' do
+    it 'will return a printed statement' do
+      printer_return = "date || credit || debit || balance\n14/01/2012 || || 500.00 || 2500.00"
+      @entry_class_double = double('Entry Class')
+      @printer_double = double('Printer', new: self, print_statement: printer_return)
+      bank = Bank.new(@entry_class_double, @printer_double)
+      expect(bank.print_statement).to eq printer_return
+    end
+  end
 end
