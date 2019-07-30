@@ -11,6 +11,9 @@ class Bank
 
   def deposit(amount)
     @account_balance += amount
+    entry = new_entry('debit', amount, @account_balance)
+    @entries.push(entry)
+    entry
   end
 
   def withdraw(amount)

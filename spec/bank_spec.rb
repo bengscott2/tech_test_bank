@@ -20,6 +20,13 @@ describe Bank do
       expect(@bank.get_balance).to eq 100
     end
 
+    it 'will return a new entry' do
+      entry = @bank.deposit(100)
+      expect(entry.type).to eq 'credit'
+      expect(entry.amount).to eq 100
+      expect(entry.balance_at_entry).to eq 100
+    end
+
   end
 
   describe '#withdraw' do
