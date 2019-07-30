@@ -5,3 +5,9 @@ Metrics/BlockLength:
   Enabled: true
   Exclude:
     - spec/*
+
+Metrics/LineLength:
+  Enabled: true
+  Exclude:
+    - spec/*
+    - spec/*/*

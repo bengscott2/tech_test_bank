@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require_relative 'entry.rb'
 require_relative 'printer.rb'
 
