@@ -18,7 +18,7 @@ describe Entry do
       expect(@entry.amount).to eq 1000
     end
     it 'stores balance at time of entry' do
-      expect(@entry.balance).to eq 1000
+      expect(@entry.balance_at_entry).to eq 1000
     end
   end
 end
