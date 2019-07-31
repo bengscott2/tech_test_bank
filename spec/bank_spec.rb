@@ -54,9 +54,13 @@ describe Bank do
 
   describe '#print_statement' do
     it 'will return a printed statement' do
-      printer_return = "date || credit || debit || balance\n14/01/2012 || || 500.00 || 2500.00"
+      printer_return = [
+        'date || credit || debit || balance',
+        '14/01/2012 || || 500.00 || 2500.00'
+      ].join("\n")
       @entry_class_double = double('Entry Class')
-      @printer_double = double('Printer', new: self, print_statement: printer_return)
+      @printer_double = double('Printer', new: self,
+                                          print_statement: printer_return)
       bank = Bank.new(@entry_class_double, @printer_double)
       expect { bank.print_statement }.to output(printer_return).to_stdout
     end
